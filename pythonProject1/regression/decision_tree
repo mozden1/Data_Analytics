@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Weight &le; 52.5<br/>gini = 0.68<br/>samples = 86<br/>value = [23, 8, 16, 39]<br/>class = Obese>, fillcolor="#f5cdf8"] ;
+1 [label=<gini = 0.0<br/>samples = 39<br/>value = [0, 0, 0, 39]<br/>class = Obese>, fillcolor="#d739e5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<BMI &le; 24.6<br/>gini = 0.616<br/>samples = 47<br/>value = [23, 8, 16, 0]<br/>class = Underweight>, fillcolor="#f9e3d2"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<gini = 0.0<br/>samples = 22<br/>value = [22, 0, 0, 0]<br/>class = Underweight>, fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label=<Weight &le; 97.5<br/>gini = 0.486<br/>samples = 25<br/>value = [1, 8, 16, 0]<br/>class = Overweight>, fillcolor="#a2d1f3"] ;
+2 -> 4 ;
+5 [label=<ID &le; 23.0<br/>gini = 0.111<br/>samples = 17<br/>value = [1, 0, 16, 0]<br/>class = Overweight>, fillcolor="#45a3e7"] ;
+4 -> 5 ;
+6 [label=<ID &le; 18.5<br/>gini = 0.444<br/>samples = 3<br/>value = [1, 0, 2, 0]<br/>class = Overweight>, fillcolor="#9ccef2"] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 2, 0]<br/>class = Overweight>, fillcolor="#399de5"] ;
+6 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0, 0]<br/>class = Underweight>, fillcolor="#e58139"] ;
+6 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 14<br/>value = [0, 0, 14, 0]<br/>class = Overweight>, fillcolor="#399de5"] ;
+5 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 8<br/>value = [0, 8, 0, 0]<br/>class = Normal Weight>, fillcolor="#47e539"] ;
+4 -> 10 ;
+}
